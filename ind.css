@@ -1,83 +1,147 @@
+
+@red: #F73F52;
+@orange: #FF9000;
+@yellow: #FBD400;
+@green: #9ED763;
+@blue: #6730EC;
+@purple: #815A8F;
+@white: #5dbe1c;
+@rebeccapurple: #663399;
+@pink:pink;
+@black:rgb(0, 217, 255);
 body {
   background: -webkit-linear-gradient(left, #ff001b, #eb172e, #e91f34, #cf3f4e);
 }
-img {
+img{
   margin-bottom: 60px;
 }
 .logo {
   margin-bottom: 30px;
   background-color: white;
-  height: 80px;
+  height: 100px;
 }
+
 .swatch {
   display: block;
   text-align: center;
   position: relative;
   margin: 100px;
+  
+div {
+    color: rgb(255, 255, 255);
+   font-weight: 700;
+   font-size:22px;
+    width: 70px;
+    height: 225px;
+    position: absolute;
+    top: 0px;
+    border-radius: 5px;
+    border-top: solid 2px rgba(0, 0, 0, .2);
+    border-left: solid 3px rgba(255, 255, 255, .2);
+    border-bottom: solid 3px rgba(0, 0, 0, .2);
+    text-align: center;
+    box-sizing: border-box;
+    transform-origin: center 90%;
+    display: inline-block;
+    backface-visibility: hidden;
+    margin-left: -35px;
+    transform: rotate(0deg);
+  }
+  
+  div:before {
+    width: 16px;
+    height: 16px;
+    content: "";
+    background-color: @white;
+    display: inline-block;
+    border-radius: 8px;
+    bottom: 10px;
+    position: absolute;
+    margin-left: -8px;
+  }
+  
+  div:nth-child(1) {
+    background-color: @purple;
+    animation: swatch-purple-motion 5s cubic-bezier(0.4, 0.0, 0.2, 1) infinite;
+  }
+  div:nth-child(2) {
+    background-color: @blue;
+    animation: swatch-blue-motion 5s cubic-bezier(0.4, 0.0, 0.2, 1) infinite;
+  }
+  div:nth-child(3) {
+    background-color: @green;
+    animation: swatch-green-motion 5s cubic-bezier(0.4, 0.0, 0.2, 1) infinite;
+  }
+  div:nth-child(4) {
+    background-color: @yellow;
+    animation: swatch-yellow-motion 5s cubic-bezier(0.4, 0.0, 0.2, 1) infinite;
+  }
+  div:nth-child(5) {
+    background-color: @orange;
+    animation: swatch-orange-motion 5s cubic-bezier(0.4, 0.0, 0.2, 1) infinite;
+  }
+  div:nth-child(6) {
+    background-color: @red;
+    animation: swatch-red-motion 5s cubic-bezier(0.4, 0.0, 0.2, 1) infinite;
+  }
+  div:nth-child(7) {
+    background-color: @pink;
+    animation: swatch-pink-motion 5s cubic-bezier(0.4, 0.0, 0.2, 1) infinite;
+  }
+  div:nth-child(8) {
+    background-color: @white;
+    animation: swatch-white-motion 5s cubic-bezier(0.4, 0.0, 0.2, 1) infinite;
+  }
+  div:nth-child(9) {
+    background-color: @black;
+    animation: swatch-black-motion 5s cubic-bezier(0.4, 0.0, 0.2, 1) infinite;
+  }
 }
-.swatch div {
-  color: #ffffff;
-  font-weight: 700;
-  font-size: 22px;
-  width: 70px;
-  height: 225px;
-  position: absolute;
-  top: 0px;
-  border-radius: 5px;
-  border-top: solid 2px rgba(0, 0, 0, 0.2);
-  border-left: solid 3px rgba(255, 255, 255, 0.2);
-  border-bottom: solid 3px rgba(0, 0, 0, 0.2);
-  text-align: center;
-  box-sizing: border-box;
-  transform-origin: center 90%;
-  display: inline-block;
-  margin-left: -35px;
-  transform: rotate(0deg);
+
+transform(@fromDeg, @toDeg) {
+  0% 
+  {
+    transform: rotate(@fromDeg);
+  }
+  30%,
+  70% {
+    transform: rotate(@toDeg);
+  }
+  90%,
+  10% {
+    transform: rotate(@fromDeg);
+  }
 }
-.swatch div:before {
-  width: 16px;
-  height: 16px;
-  content: "";
-  background-color: #5dbe1c;
-  display: inline-block;
-  border-radius: 8px;
-  bottom: 10px;
-  position: absolute;
-  margin-left: -8px;
+
+@keyframes swatch-purple-motion {
+  .transform(0deg, -80deg);
 }
-.swatch div:nth-child(1) {
-  background-color: #815A8F;
-  animation: swatch-purple-motion 5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+
+@keyframes swatch-blue-motion {
+  .transform(0deg, -60deg);
 }
-.swatch div:nth-child(2) {
-  background-color: #6730EC;
-  animation: swatch-blue-motion 5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+
+@keyframes swatch-green-motion {
+  .transform(0deg, -40deg);
 }
-.swatch div:nth-child(3) {
-  background-color: #9ED763;
-  animation: swatch-green-motion 5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+
+@keyframes swatch-yellow-motion {
+  .transform(0deg, -20deg);
 }
-.swatch div:nth-child(4) {
-  background-color: #FBD400;
-  animation: swatch-yellow-motion 5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+
+@keyframes swatch-orange-motion {
+  .transform(0deg, -0deg);
 }
-.swatch div:nth-child(5) {
-  background-color: #FF9000;
-  animation: swatch-orange-motion 5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+
+@keyframes swatch-red-motion {
+  .transform(0deg, 20deg);
 }
-.swatch div:nth-child(6) {
-  background-color: #F73F52;
-  animation: swatch-red-motion 5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
-}
-.swatch div:nth-child(7) {
-  background-color: pink;
-  animation: swatch-pink-motion 5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
-}
-.swatch div:nth-child(8) {
-  background-color: #5dbe1c;
-  animation: swatch-white-motion 5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
-}
-.swatch div:nth-child(9) {
-  background-color: #00d9ff;
-  animation: swatch-black-motion 5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
-}
+@keyframes swatch-pink-motion {
+    .transform(0deg, 40deg);
+  }
+  @keyframes swatch-white-motion {
+    .transform(0deg, 60deg);
+  }
+  @keyframes swatch-black-motion {
+    .transform(0deg, 80deg);
+  }
