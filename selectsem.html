@@ -1,0 +1,234 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/20c5629a29.js" crossorigin="anonymous"></script>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js"></script>
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="select-sem.css">
+ 
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light mt-0 fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">G-Resource</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Courses</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Domains</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Placements</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class=" container2">
+        <div class="content">
+            <div class="row">
+            <div class="user-details col ">
+                <div class="input-box col-12 col-md-4">
+                    <lable for="year">Select Regulation Year:</lable><br>
+                    <input class="mt-3" type="text" placeholder="RYear" id="ryear" list="ryears" autocomplete="off">
+                    <datalist id="ryears">
+                        <option>2019-20</option>
+                        <option>2020-21</option>
+                        <option>2021-22</option>
+                        <option>2021-22</option>
+                    </datalist>
+                    <br><br>
+                    <lable for="year">Select Your Year:</lable><br>
+                    <input class="mt-3" type="text" placeholder="Year" id="year" list="years" autocomplete="off">
+                    <datalist id="years">
+                        <option>1st</option>
+                        <option>2nd</option>
+                        <option>3rd</option>
+                        <option>4th</option>
+
+                    </datalist>
+                    <br>
+                    <br>
+                    <lable for="value">Select Semester:</lable><br>
+                    <input class="mt-3" type="text" placeholder="Semester" id="sem" list="sems" autocomplete="off">
+                    <datalist id="sems">
+                        <option>1st</option>
+                        <option>2nd</option>
+                    </datalist>
+               
+                <br>
+                
+        
+       <button class="btn btn-primary mt-2" onclick="con()">Submit</button>
+    </div>
+    </div>
+       <div class="col-md-5 heading">G-Resource</div> 
+    </div>
+    </div>
+</div>
+    
+    <div class="contactus">
+        <div class="footer-dark" style="font-family: Inter;">
+          <footer>
+             <div class="bscontainer">
+                <div class="bsrow">
+                   <div class="bscol-md-2 item">
+                      <h3>Pages</h3>
+                      <ul>
+                         <li><a data-bs-toggle="modal" data-bs-target="#staticBackdrop">Home</a></li>
+                         <li><a data-bs-toggle="modal" data-bs-target="#staticBackdrop">Courses</a></li>
+                         <li><a data-bs-toggle="modal" data-bs-target="#staticBackdrop">Domains</a></li>
+                         <li><a data-bs-toggle="modal" data-bs-target="#staticBackdrop">Contact</a></li>
+                      </ul>
+                   </div>
+                   <div class="bscol-md-2 item">
+                      <h3>Know More</h3>
+                      <ul>
+                         <li><a data-bs-toggle="modal" data-bs-target="#staticBackdrop" >Membership</a></li>
+                         <li><a data-bs-toggle="modal" data-bs-target="#staticBackdrop">Our Team</a></li>
+                      </ul>
+                   </div>
+                   <div class="bscol-md-2 item">
+                      <h3>Other Details</h3>
+                      <ul>
+                         <li><a href="#">Privacy Policy</a></li>
+                         <li><a href="#">Terms of Service</a></li>
+                      </ul>
+                   </div>
+                   <div class="bscol-md-6 item text">
+                      <h3>The G-Resource</h3>
+                      <p id="copyright">G-Resource site have been used by many Students</p>
+                   </div>
+                   <div class="social_links">
+                      <a href="https://www.instagram.com/">
+                      <span class="fa-stack fa-lg ig combo">
+                         <i class="fa fa-circle fa-stack-2x circle"></i>
+                         <i class="fa fa-instagram fa-stack-1x fa-inverse icon"></i>
+                      </span>
+                      </a>
+                      <a href="https://www.facebook.com/">
+                      <span class="fa-stack fa-lg fb combo">
+                         <i class="fa fa-circle fa-stack-2x circle"></i>
+                         <i class="fa fa-facebook fa-stack-1x fa-inverse icon"></i>
+                      </span>
+                      </a>
+                      <a href="https://www.youtube.com/">
+                      <span class="fa-stack fa-lg yt combo">
+                         <i class="fa fa-circle fa-stack-2x circle"></i>
+                         <i class="fa fa-youtube-play fa-stack-1x fa-inverse icon"></i>
+                      </span>
+                      </a>
+                   
+                   </div>
+                </div>
+                <p class="copyright">The G-Resource © 2022</p>
+             </div>
+          </footer>
+       </div>
+        </div>
+      
+</div>
+
+
+    <script>
+        function con() {
+            let yearel = document.getElementById("year").value;
+            let semel = document.getElementById("sem").value;
+            let regel = document.getElementById("ryear").value;
+            let P = document.getElementById("pa");
+            var timer = setTimeout(function() {
+              
+                    if (yearel === "1st")
+                    {
+                        if (semel === "1st")
+                        {
+                            window.location.href="./2021-22/sem-selection/1stsemsubjects.html";
+                        } 
+                        else if (semel === "2nd") 
+                        {
+                            window.location.href ="./2021-22/sem-selection/2ndsemsubjects.html";
+                        } 
+                        else 
+                        {
+                            alert("please choose semester");
+                        }
+                    } 
+                    else if (yearel === "2nd")
+                    {
+                        if (semel === "1st")
+                        {
+                            window.location.href = "./2021-22/sem-selection/3rdsemsubjects.html";
+                        } 
+                        else if (semel === "2nd")
+                        {
+                            window.location.href= "./2021-22/sem-selection/4thsemsubjects.html";
+                        }
+                        else
+                        {
+                            alert("please choose semester");
+                        }
+                    }       
+                    else if (yearel === "3rd")
+                    {
+                        if (semel === "1st")
+                        {   
+                            window.location.href = "./2021-22/sem-selection/5thsemsubjects.html";
+                        }
+                        else if (semel === "2nd")
+                        {
+                            window.location.href = "./2021-22/sem-selection/6thsemsubjects.html";
+                        } 
+                        else
+                        {
+                            alert("please choose semester");
+                        }
+                    } 
+                    else if (yearel === "4th") 
+                    {
+                        if (semel === "1st")
+                        {
+                            window.location.href = "./2021-22/sem-selection/7thsemsubjects.html";
+                        } 
+                        else if (semel === "2nd") 
+                        {
+                            window.location.href = "./2021-22/sem-selection/8thsemsubjects.html";
+                        } 
+                        else 
+                        {
+                            alert("please choose semester");
+                        }
+                    } 
+                    else 
+                    {
+                        alert("please choose year");
+                    }
+           
+                    }, 000);
+
+                }
+    
+    </script>
+
+</body>
+
+</html>

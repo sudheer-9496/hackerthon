@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Welcome</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/20c5629a29.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="../g/2021-22/css/g-login.css" />
+</head>
+<style>
+  @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    color: #fffcfc;
+}
+
+html,
+body {
+    display: grid;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+   
+   background: -webkit-linear-gradient(left, #000000, #000000, #000000, #000000);
+    /* background-image: url("https://ebookfriendly.com/wp-content/uploads/2016/08/Animated-gif-my-favorite-book.gif");
+
+background-image: url("https://media.giphy.com/media/l0HlQI7WEN5gmUzgQ/giphy.gif");*/
+background-position-x: center;
+background-repeat: initial;
+}
+
+
+::selection {
+    
+    color: #fff;
+}
+
+.wrapper {
+  border-color: #eb172e;
+    overflow: hidden;
+    max-width: 390px;
+    max-height: 500px;
+    background: rgba(255, 255, 255, 0);
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.1);
+   
+
+}
+
+.wrapper .title-text {
+    display: flex;
+    width: 200%;
+}
+
+.wrapper .title {
+    width: 50%;
+    color: #f0f0f0;
+    font-size: 35px;
+    font-weight: 600;
+    text-align: center;
+    transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .slide-controls {
+    position: relative;
+    display: flex;
+    height: 50px;
+    width: 100%;
+    overflow: hidden;
+    margin: 30px 0 10px 0;
+    justify-content: space-between;
+    border: 1px solid lightgrey;
+    border-radius: 15px;
+}
+
+.slide-controls .slide {
+    height: 100%;
+    width: 100%;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+    line-height: 48px;
+    cursor: pointer;
+    z-index: 1;
+    transition: all 0.6s ease;
+}
+
+.slide-controls label.signup {
+    color: #ffffff;
+}
+
+.slide-controls .slider-tab {
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    left: 0;
+    z-index: 0;
+    border-radius: 15px;
+    background: -webkit-linear-gradient(left, #ff001b, #eb172e, #e91f34, #cf3f4e);
+    transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+#signup:checked~.slider-tab {
+    left: 50%;
+}
+
+#signup:checked~label.signup {
+    color: #fff;
+    cursor: default;
+    user-select: none;
+}
+
+#signup:checked~label.login {
+    color: #ffffff;
+}
+
+#login:checked~label.signup {
+    color: #ffffff;
+}
+
+#login:checked~label.login {
+    cursor: default;
+    user-select: none;
+}
+
+.wrapper .form-container {
+    width: 100%;
+    overflow: hidden;
+}
+
+.form-container .form-inner {
+    display: flex;
+    width: 200%;
+}
+
+.form-container .form-inner form {
+    width: 50%;
+    transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.form-inner form .field {
+    height: 50px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.form-inner form .field input {
+    height: 100%;
+    width: 100%;
+    outline: none;
+    padding-left: 15px;
+    border-radius: 15px;
+    border: 1px solid lightgrey;
+    border-bottom-width: 2px;
+    font-size: 17px;
+    transition: all 0.3s ease;
+}
+
+.form-inner form .field input:focus {
+    border-color: #ff00f2;
+    /* box-shadow: inset 0 0 3px #fb6aae; */
+}
+
+.form-inner form .field input::placeholder {
+    color: #999;
+    transition: all 0.3s ease;
+}
+
+form .field input:focus::placeholder {
+    color: #28a9ff;
+}
+
+.form-inner form .pass-link {
+    margin-top: 5px;
+}
+
+.form-inner form .signup-link {
+    text-align: center;
+    margin-top: 30px;
+    color: #f0f0f0;
+}
+
+.form-inner form .pass-link a,
+.form-inner form .signup-link a {
+    color: #0a9ce0;
+    text-decoration: none;
+}
+
+.form-inner form .pass-link a:hover,
+.form-inner form .signup-link a:hover {
+    text-decoration: underline;
+}
+
+form .btn {
+    height: 50px;
+    width: 100%;
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+}
+
+form .btn .btn-layer {
+    height: 100%;
+    width: 300%;
+    position: absolute;
+    left: -100%;
+    background: -webkit-linear-gradient(right, #ff001b, #eb172e, #e91f34, #cf3f4e);
+    border-radius: 15px;
+    transition: all 0.4s ease;
+    ;
+}
+
+form .btn:hover .btn-layer {
+    left: 0;
+}
+
+form .btn input[type="submit"] {
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    position: relative;
+    background: none;
+    border: none;
+    color: #fff;
+    padding-left: 0;
+    border-radius: 15px;
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.logo {
+    /*margin-bottom: 30px;*/
+    background-color: white;
+    border-radius: 3px;
+    height: 70px;
+    width: 50px;
+}
+.sideimg{
+    padding: 0px;
+    margin: 0px ;
+    border-top-left-radius: 35%;
+    border-bottom-left-radius: 35%;
+    shape-outside: circle(50%);
+}
+.Ghead{
+    color: #fff;
+    font-size: 50px;
+
+}
+.book {
+  transition: opacity 0.4s 0.2s;
+
+}
+p{
+  margin-top: 8vw;
+  text-align: center;
+  font-size: 5vw;
+  color: #000000;
+}
+.page {
+  
+  width: 30vw;
+  height: 40vw;
+  background-color: #111111;
+  float: left;
+  margin-bottom: 0.5em;
+  background:  no-repeat;
+  border-radius: 10px;
+  background-size: cover;
+}
+.page:nth-child(even) {
+  clear: both;
+}
+.book {
+  perspective: 250vw;
+}
+.gifimg{
+	padding:10px;
+	height: 78vh;
+width:30vw;
+}
+.book .pages {
+  width: 60vw;
+  height: 40vw;
+  position: relative;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  border-radius: 4px;
+  /*box-shadow: 0 0 0 1px #e3dfd8;*/
+}
+#open{
+  background-image:url('https://i.pinimg.com/originals/8d/b1/95/8db195a0990c29a50a63ea8e7767c6e8.jpg');
+}
+.booklogo{
+  padding-top: 40px;
+  height: 110px;
+  width: 300px;
+  
+}
+.book .page {
+  float: none;
+  clear: none;
+  margin: 0;
+  position: absolute;
+  top: 0;
+  width: 30vw;
+  height: 38vw;
+  transform-origin: 0 0;
+  transition: transform 1.4s;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+  cursor: pointer;
+  user-select: none;
+  background-color: #f0f0f0;
+}
+.book .page:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0);
+  transition: background 0.7s;
+  z-index: 2;
+}
+.book .page:nth-child(odd) {
+  pointer-events: all;
+  transform: rotateY(0deg);
+  right: 0;
+  border-radius: 0 4px 4px 0;
+  background-image: linear-gradient(to right, rgba(0,0,0,.15) 0%, rgba(0,0,0,0) 10%);
+}
+.book .page:nth-child(odd):hover {
+  transform: rotateY(-15deg);
+}
+.book .page:nth-child(odd):hover:before {
+  background: rgba(0, 0, 0, 0.03);
+}
+.book .page:nth-child(odd):before {
+  background: rgba(0, 0, 0, 0);
+}
+.book .page:nth-child(even) {
+  pointer-events: none;
+  transform: rotateY(180deg);
+  transform-origin: 100% 0;
+  left: 0;
+  border-radius: 4px 0 0 4px;
+  border-color: black;
+  background-image: linear-gradient(to left, rgba(0,0,0,.12) 0%, rgba(0,0,0,0) 10%);
+}
+.book .page:nth-child(even):before {
+  background: rgba(0, 0, 0, 0.2);
+}
+.book .page.grabbing {
+  transition: none;
+}
+.book .page.flipped:nth-child(odd) {
+  pointer-events: none;
+  transform: rotateY(-180deg);
+}
+.book .page.flipped:nth-child(odd):before {
+  background: rgba(0, 0, 0, 0.2);
+}
+.book .page.flipped:nth-child(even) {
+  pointer-events: all;
+  transform: rotateY(0deg);
+}
+.book .page.flipped:nth-child(even):hover {
+  transform: rotateY(15deg);
+}
+.book .page.flipped:nth-child(even):hover:before {
+  background: rgba(0, 0, 0, 0.03);
+}
+.book .page.flipped:nth-child(even):before {
+  background: rgba(0, 0, 0, 0);
+}
+*,
+* :before,
+*:after {
+  box-sizing: border-box;
+}
+
+.page:nth-child(odd){
+  background-position: right top;
+}
+.p1{
+  color: #f0f0f0;
+}
+h2{
+margin-top: 120px;
+}
+@media screen and (min-width: 0px) and (max-width: 720px) {
+  #book { display: none; }
+  .mobile-hide{ display: none; }
+}
+
+
+</style>
+<script>    
+  function lo(){
+   window.location.href="./selectsem.html";
+        }
+        </script>
+ <script type="module">
+ 
+ const loginText = document.querySelector(".title-text .login");
+ const loginForm = document.querySelector("form.login");
+ const loginBtn = document.querySelector("label.login");
+ const signupBtn = document.querySelector("label.signup");
+ const signupLink = document.querySelector("form .signup-link a");
+ signupBtn.onclick = (() => {
+     loginForm.style.marginLeft = "-50%";
+     loginText.style.marginLeft = "-50%";
+ });
+ loginBtn.onclick = (() => {
+     loginForm.style.marginLeft = "0%";
+     loginText.style.marginLeft = "0%";
+ 
+ });
+ signupLink.onclick = (() => {
+     signupBtn.click();
+     return false;
+ });
+  // var pages = document.getElementsByClassName('page');
+  //    for(var i = 0; i < pages.length; i++)
+  //      {
+  //        var page = pages[i];
+  //        if (i % 2 === 0)
+  //          {
+  //            page.style.zIndex = (pages.length - i);
+  //          }
+  //      }
+   
+  //    document.addEventListener('DOMContentLoaded', function(){
+  //      for(var i = 0; i < pages.length; i++)
+  //        {
+  //          //Or var page = pages[i];
+  //          pages[i].pageNum = i + 1;
+  //          pages[i].onclick=function()
+  //            {
+  //              if (this.pageNum % 2 === 0)
+  //                {
+  //                  this.classList.remove('flipped');
+  //                  this.previousElementSibling.classList.remove('flipped');
+  //                }
+  //              else
+  //                {
+  //                  this.classList.add('flipped');
+  //                  this.nextElementSibling.classList.add('flipped');
+  //                }
+  //             }
+  //          }
+  //    })
+   </script>
+ <style>
+  h1 {
+  text-align: center;
+  color: #ffffff;
+}
+
+#reader {
+  width: 500px;
+}
+
+.result {
+  background-color: green;
+  color: #fff;
+  padding: 20px;
+}
+
+.row {
+  display: flex;
+}
+
+#reader__scan_region {
+  background: white;
+}
+button{
+  color: #000000;
+}
+#lpassword,#repassword,#email{
+  color: #000000;
+}
+</style>
+<body>
+    <div class="d-flex flex-row ">
+    <img src="https://www.gitam.edu/assets/images/GITAM_logo.png" class="img-fluid logo col-12 col-md-2"  />
+<!--<h1 class="Ghead ml-5">G-Resource</h1>-->
+</div>
+<div class="col-12 d-flex flex-row justify-content-center">
+<!--BOOK-->
+    <!-- <div class="book mobile-hide mr-2" id="book" >
+<div id="pages" class="pages">
+  <div class="page" id="open"><img class="booklogo " src="https://th.bing.com/th/id/OIP.UlAnO39WgY--Uk3l2ugnQAAAAA?pid=ImgDet&rs=1"><p class="p1"></p></div>
+  
+  <div class="page"><p>Hello there!</p></div>
+
+
+  <div class="page"><p> G-Resource</p></div>
+  <div class="page"><h2> G-Resource is a platform where You can access any year course .We will provide all the best resources at a place.</h2></div>
+  <div class="page"></div>
+  <div class="page"></div>
+  <div class="page"></div>
+  <div class="page"></div>
+  <div class="page"></div>
+  <div class="page"></div>
+  <div class="page"></div>
+  <div class="page"></div>
+  <div class="page"></div>
+  <div class="page"></div>
+  <div class="page"></div>
+  <div class="page"></div>
+  <div class="page"></div>
+  <div class="page"></div>
+  <div class="page"></div>
+  <div class="page"></div>
+  <div class="page"></div>
+  <div class="page"></div>
+  <div class="page"></div>
+  <div class="page"><p>Meet the Developers</p></div>
+   <div class="page"> <img id="gifimg" src="https://gitambloodbank.me/assets/img/YASHWANTSIR.webp"></div>
+   <div class="page"><p>P.Sudheer Varma</p></div>
+   <div class="page"> <img class="gifiytmg2" src="../public/sudheer.jpg2"></div>
+
+
+  <div class="page"><img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Ftenor.com%2Fsearch%2Freading-gifs&psig=AOvVaw2mB5lUHLQkmA0MH4O6qDwI&ust=1669953878685000&source=images&cd=vfe&ved=0CAwQjRxqFwoTCNCen4_F1_sCFQAAAAAdAAAAABAE"></div>
+  <div class="page"><p>Thank You</p></div>
+  <div class="page"><p>Roll Back</p></div>
+</div>
+
+
+</div> -->
+          
+<!--BOOK-->
+
+<div class="row">
+  <div class="col">
+    <h1>Login with QR</h1>
+    <div id="reader"></div>
+  </div>
+  <div class="col" style="padding: 30px">
+    
+    <div id="result">
+    </div>
+  </div>
+
+</div>
+<script src="https://unpkg.com/html5-qrcode" type="text/javascript"></script>
+<script>
+
+  // When scan is successful fucntion will produce data
+function onScanSuccess(qrCodeMessage) {
+ let y= document.getElementById("result").innerHTML =
+    '<span class="result">' + qrCodeMessage + "</span>";
+  console.log(qrCodeMessage);
+  if(qrCodeMessage[0]=="V" || qrCodeMessage[0]=="B" ||qrCodeMessage[0]=="H" && qrCodeMessage[1]=="U" || qrCodeMessage[0]=="1"){
+    
+     var timer = setTimeout(function() {
+           window.location.href="./selectsem.html";
+        }, 1000);
+    console.log("top");
+        }
+  else{
+    console.log("no")
+  }
+}
+
+// When scan is unsuccessful fucntion will produce error message
+function onScanError(errorMessage) {
+  // Handle Scan Error
+}
+
+// Setting up Qr Scanner properties
+var html5QrCodeScanner = new Html5QrcodeScanner("reader", {
+    
+  fps: 100,
+  qrbox: 250
+});
+
+// in
+html5QrCodeScanner.render(onScanSuccess, onScanError);
+
+// if (qrCodeMessage == "VU21CSEN0300376") {
+//   console.log("fruio");
+// }
+
+</script>
+
+
+
+<div id="book">
+
+<div class="wrapper col-md-6  mb-3" >
+              <div class="title-text">
+                  <div class="title login">Login Form</div>
+                  <div class="title signup">Signup Form</div>
+              </div>
+              <div class="form-container">
+                  <div class="slide-controls">
+                      <input type="radio" name="slide" id="login" checked>
+                      <input type="radio" name="slide" id="signup">
+                      <label for="login" class="slide login">Login</label>
+                      <label for="signup" class="slide signup">Signup</label>
+                      <div class="slider-tab"></div>
+                  </div>
+                  <div class="form-inner">
+                      <form action="#" class="login">
+                          <div class="field">
+                              <input type="text" placeholder="Email Address" id="lemail" required>
+                          </div>
+                          <div class="field">
+                              <input type="password" placeholder="Password" id="password" required>
+                          </div>
+                          <div class="pass-link"><a href="#">Forgot password?</a></div>
+                          <div class="field ">
+                              <div class="btn-layer"></div>
+
+                           <button class="btn btn-danger mt-3" role="button" id="login" value="Login">login</button>
+                          
+                          </div>
+
+                          <div class="signup-link">Not a member? <a href="#">Signup</a></div>
+                      </form>
+                      <form action="#" class="signup">
+                          <div class="field">
+                              <input type="text" placeholder="Email Address" id="email" required>
+                          </div>
+                          
+                          <div class="field">
+                              <input type="password" placeholder="Password" id="lpassword" required>
+                          </div>
+                          <div class="field">
+                              <input type="password" placeholder="Confirm password" id="repassword" required>
+                          </div>
+                          <div class="field ">
+                              <div class="btn-layer"></div>
+                              <button class="btn btn-danger mt-3" role="button" id="signup" value="signup" >signup</button> 
+                            </div>
+                      </form>
+                  </div>
+              </div>
+          
+              </div>
+            </div>
+          </center>
+          </div>
+
+          <script type="module">
+            // Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.1/firebase-app.js";
+import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.12.1/firebase-analytics.js";
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyDphlZbU2Jk8pcZ5fOEyZYc2Wlg0Zt6VjI",
+  authDomain: "g1resource.firebaseapp.com",
+  databaseURL: "https://g1resource-default-rtdb.firebaseio.com",
+  projectId: "g1resource",
+  storageBucket: "g1resource.appspot.com",
+  messagingSenderId: "625264614202",
+  appId: "1:625264614202:web:e3d868488675d1dd394e03",
+  measurementId: "G-8TQ9ZXM2ND"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
+const auth = getAuth();
+
+signup.addEventListener('click',(e) => {
+  var email = document.getElementById('lemail').value;
+  var password = document.getElementById('lpassword').value;
+  var repassword = document.getElementById('repassword').value;
+})    
+                  createUserWithEmailAndPassword(auth, email, password)
+                  .then((userCredential) => 
+                  {
+                    if (email!="")
+                    {
+                      const user = userCredential.user;
+                      set(ref(database, 'users/'+ user.uid ),{
+                      email: email
+                      })
+                      alert('user created!');
+                      return true
+                    }
+                  });
+                  login.addEventListener('click',(e)=>{
+                    var email = document.getElementById('email').value;
+                    var password = document.getElementById('password').value;
+
+                    signInWithEmailAndPassword(auth, email, password)
+                    .then((userCredential) => {
+                      // Signed in 
+                      const user = userCredential.user;
+              
+                      const dt = new Date();
+                       update(ref(database, 'users/' + user.uid),{
+                      
+                      })
+              
+                       
+                       window.location="selectsem.html"
+                      // ...
+                    })
+                    .catch((error) => {
+                      const errorCode = error.code;
+                      const errorMessage = error.message;
+                      alert(errorMessage);
+                });
+              });
+</script>
+            
+</body>
+
+</html>
